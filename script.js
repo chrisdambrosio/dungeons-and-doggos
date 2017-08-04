@@ -33,8 +33,6 @@ class Lightbox {
     this.el = document.createElement("div");
     this.el.appendChild(this.template.content.cloneNode(true));
 
-    this.select(0);
-
     const previewAreaEl = this.el.querySelector(".lightbox-preview-area");
 
     this.photos.forEach((photo, index) => {
@@ -46,7 +44,10 @@ class Lightbox {
 
       const previewEl = this.previewTemplate.content.cloneNode(true);
       previewAreaEl.appendChild(previewEl);
+
     });
+
+    this.select(0);
 
     document.querySelector("body").appendChild(this.el);
   }
@@ -76,6 +77,12 @@ class Lightbox {
     const imageEl = this.el.querySelector(".lightbox-image");
     imageEl.src = "";
     imageEl.src = this.photos[index].url;
+
+    this.el.querySelectorAll(`[data-index]`)
+      .forEach(el => el.classList.remove("lightbox-preview-active"));
+
+    this.el.querySelector(`[data-index='${index}'`)
+      .classList.add("lightbox-preview-active");
 
     this.selectedIndex = index;
   }
