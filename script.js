@@ -53,10 +53,10 @@ class Lightbox {
       if (event.key == "Escape") {
         this.close();
       }
-      else if (event.key == "ArrowRight") {
+      else if (event.key == "ArrowRight" || event.key == "j") {
         this.next();
       }
-      else if (event.key == "ArrowLeft") {
+      else if (event.key == "ArrowLeft" || event.key == "k") {
         this.previous();
       }
     }).bind(this);
