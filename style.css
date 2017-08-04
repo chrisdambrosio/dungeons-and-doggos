@@ -91,3 +91,7 @@ button {
   height: 55px;
   width: 55px;
 }
+
+.lightbox-button.lightbox-button-disabled {
+  fill: #333;
+}

@@ -70,6 +70,7 @@ class Lightbox {
 
   select(index) {
     index = parseInt(index);
+    this.selectedIndex = index;
 
     const titleEl = this.el.querySelector(".lightbox-title");
     titleEl.textContent = this.photos[index].title;
@@ -84,7 +85,18 @@ class Lightbox {
     this.el.querySelector(`[data-index='${index}'`)
       .classList.add("lightbox-preview-active");
 
-    this.selectedIndex = index;
+    this.el.querySelectorAll(`.lightbox-button`)
+      .forEach(el => el.classList.remove("lightbox-button-disabled"));
+
+    if (index < 1) {
+      this.el.querySelector(".lightbox-previous-button")
+        .classList.add("lightbox-button-disabled");
+    }
+
+    if (index >= this.photos.length - 1) {
+      this.el.querySelector(".lightbox-next-button")
+        .classList.add("lightbox-button-disabled");
+    }
   }
 
   addPhoto(photo) {
