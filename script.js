@@ -49,10 +49,18 @@ class Lightbox {
 
     this.select(0);
 
+    document.addEventListener("keydown", this.onkeydown.bind(this))
     document.querySelector("body").appendChild(this.el);
   }
 
+  onkeydown(event) {
+    if (event.key == "Escape") {
+      this.close();
+    }
+  }
+
   close() {
+    document.removeEventListener("keydown", this.onkeydown);
     this.el.remove();
   }
 
