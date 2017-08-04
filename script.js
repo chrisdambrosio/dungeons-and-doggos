@@ -2,19 +2,23 @@ const GIPHY_API_KEY = "203c2b20fd4d416b9c4ade385b90c0d9";
 const DOGGOS = [
   { giphyId: "11MS2pksWxB8SA",
     name: "John Barkham",
-    class: "Bard"
+    class: "Bard",
+    classIcon: "bard.svg"
   },
   { giphyId: "t8yU2AkVhAJqM",
     name: "Sasha",
-    class: "Thief"
+    class: "Thief",
+    classIcon: "thief.svg"
   },
   { giphyId: "szdbkOn1K6iXu",
     name: "Boomer",
-    class: "Fighter"
+    class: "Fighter",
+    classIcon: "fighter.svg"
   },
   { giphyId: "mkZ78JB74isVO",
     name: "Coco",
-    class: "Cleric"
+    class: "Cleric",
+    classIcon: "cleric.svg"
   }
 ];
 
@@ -99,7 +103,7 @@ fetchGiphyGifs()
 
       lightbox.addPhoto({
         url: gif.images.original.url,
-        previewUrl: gif.images.fixed_height_small_still.url,
+        previewUrl: "img/" + doggo.classIcon,
         title: doggoTitle,
         id: gif.id
       });

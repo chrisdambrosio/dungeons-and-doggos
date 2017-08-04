@@ -32,20 +32,19 @@ button {
 }
 
 .lightbox-foreground {
-  background: #ddddd4;
+  background: #555;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 8px;
+  padding: 4px;
   border-radius: 2px;
 }
 
 .lightbox-preview-area {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90%;
-  height: 100px;
   left: 50%;
   transform: translateX(-50%);
   position: fixed;
@@ -54,22 +53,38 @@ button {
 
 .lightbox-preview {
   display: inline-block;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  background: #9d0a0e;
+  background: #333;
 }
 
 .lightbox-toolbar {
+  position: fixed;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
   display: flex;
   justify-content: space-between;
-  color: #333;
-  margin-bottom: 8px;
-  font-size: 24px;
+  color: #9d0a0e;
 }
 
 .lightbox-image {
   display: block;
 }
 
+.lightbox-title {
+  background: #ddddd4;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 10px 25px;
+  border-radius: 2px;
+}
+
 .lightbox-button {
-  fill: #333;
-  height: 24px;
-  width: 24px;
+  fill: #ddd;
+  height: 55px;
+  width: 55px;
 }
