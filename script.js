@@ -83,7 +83,7 @@ class Lightbox {
 
 function fetchGiphyGifs() {
   const doggoIds = DOGGOS.map(doggo => doggo.giphyId).join(",");
-  const url = `http://api.giphy.com/v1/gifs?ids=${doggoIds}&api_key=${GIPHY_API_KEY}`;
+  const url = `https://api.giphy.com/v1/gifs?ids=${doggoIds}&api_key=${GIPHY_API_KEY}`;
 
   return fetch(url)
     .then(response => response.json())
