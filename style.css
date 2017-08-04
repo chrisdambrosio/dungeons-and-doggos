@@ -1,0 +1,75 @@
+body {
+  background: #ddddd4;
+}
+
+body,
+button {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.logo {
+  display: block;
+  height: 125px;
+  margin: 15px auto;
+}
+
+.choose-button {
+  display: block;
+  margin: 35px auto;
+  height: 45px;
+  width: 325px;
+  color: #333;
+  font-size: 18px;
+}
+
+.lightbox-background {
+  position: fixed;
+  background: rgba(0, 0, 0, .8);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.lightbox-foreground {
+  background: #ddddd4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  border-radius: 2px;
+}
+
+.lightbox-preview-area {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  bottom: 10px;
+}
+
+.lightbox-preview {
+  display: inline-block;
+}
+
+.lightbox-toolbar {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.lightbox-image {
+  display: block;
+}
+
+.lightbox-button {
+  fill: #333;
+  height: 24px;
+  width: 24px;
+}
